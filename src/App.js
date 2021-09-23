@@ -52,7 +52,7 @@ const App = () => {
                 textAlign: 'center',
               }}
             >
-              Copyrights &copy; 2021 Cryptoverse App
+              Copyrights &copy; 2021 Cryptomania App
               <br />
               All Rights Reserverd
             </Typography.Title>

@@ -6,6 +6,9 @@ import { Card, Row, Col, Input } from 'antd';
 // Services
 import { useGetCryptosQuery } from '../services/cryptoApi';
 
+// Components
+import Loader from './Loader';
+
 const Cryptocurrencies = ({ simplified }) => {
   // show top 10 currencies only in home
   const count = simplified ? 10 : 100;
@@ -22,7 +25,7 @@ const Cryptocurrencies = ({ simplified }) => {
     setCryptos(filteredData);
   }, [cryptosList, searchTerm]);
 
-  if (isFetching) return 'Loading...';
+  if (isFetching) return <Loader />;
 
   return (
     <>

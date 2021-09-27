@@ -10,7 +10,7 @@ import {
 } from '@ant-design/icons';
 
 // Icon image
-import icon from '../assets/cryptocurrency.png';
+import icon from '../assets/cryptoLogo.png';
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);

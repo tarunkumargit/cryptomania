@@ -14,10 +14,10 @@ import icon from '../assets/cryptoLogo.png';
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);
-  const [screenSize, setScreenSize] = useState(null);
+  const [screenSize, setScreenSize] = useState(undefined);
 
   useEffect(() => {
-    const handleResize = () => setScreenSize(Window.innerWidth);
+    const handleResize = () => setScreenSize(window.innerWidth);
 
     window.addEventListener('resize', handleResize);
 
@@ -27,7 +27,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (screenSize < 768) {
+    if (screenSize <= 800) {
       setActiveMenu(false);
     } else {
       setActiveMenu(true);
@@ -53,10 +53,10 @@ const Navbar = () => {
           <Menu.Item icon={<HomeOutlined />}>
             <Link to="/">Home</Link>
           </Menu.Item>
-          <Menu.Item icon={<MoneyCollectOutlined />}>
+          <Menu.Item icon={<FundOutlined />}>
             <Link to="/cryptocurrencies">Cryptocurrencies</Link>
           </Menu.Item>
-          <Menu.Item icon={<FundOutlined />}>
+          <Menu.Item icon={<MoneyCollectOutlined />}>
             <Link to="/exchanges">Exchanges</Link>
           </Menu.Item>
           <Menu.Item icon={<BulbOutlined />}>

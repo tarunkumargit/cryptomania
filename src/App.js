@@ -14,6 +14,7 @@ import {
   News,
   CryptoDetails,
   Footer,
+  ScrollToTop,
 } from './components';
 
 // Routes
@@ -47,6 +48,7 @@ const App = () => {
         <div className="main">
           <Layout>
             <div className="routes">
+              <ScrollToTop />
               <Switch>
                 {routes.map(({ path, Component }) => (
                   <Route key={path} exact path={path}>

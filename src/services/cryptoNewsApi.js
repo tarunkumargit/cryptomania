@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+require('dotenv').config();
 
 // Bing news api
 const cryptoNewsHeaders = {

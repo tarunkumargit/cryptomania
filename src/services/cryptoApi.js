@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+require('dotenv').config();
 
 const cryptoApiHeaders = {
   'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
